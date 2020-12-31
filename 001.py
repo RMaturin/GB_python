@@ -1,2 +1,0 @@
-# test Git
-print('Привет!')
