@@ -11,10 +11,9 @@ def int_func(s):
 
 
 def int_func_str(s):
-    l = s.split()
     result_list = []
-    for i in range(len(l)):
-        result_list.append(int_func(l[i]))
+    for i in s.split():
+        result_list.append(int_func(i))
     return ' '.join(result_list)
 
 
