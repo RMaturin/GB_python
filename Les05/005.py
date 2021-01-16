@@ -12,7 +12,7 @@ def gen_file(file_name):
 my_file = 'numbers_string.txt'
 gen_file(my_file)
 with open(my_file, 'r', encoding='UTF-8') as f:
-    str = f.read()
-    print(str)
-    print(sum(map(int, str.split(' '))))
+    line = f.read()
+    print(line)
+    print(sum(map(int, line.split(' '))))
 

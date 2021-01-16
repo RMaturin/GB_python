@@ -10,8 +10,8 @@ d = {'One': 'Один', 'Two': 'Два', 'Three': 'Три', 'Four': 'Четыр�
 with open('digits.txt', 'r', encoding='UTF-8') as f_obj:
     with open('digits_new.txt', 'w', encoding='UTF-8') as f_obj_new:
         while True:
-            str = f_obj.readline().split()
-            if not str:
+            line = f_obj.readline().split()
+            if not line:
                 break
-            str[0] = d[str[0]]
-            f_obj_new.write(' '.join(str)+'\n')
+            line[0] = d[line[0]]
+            f_obj_new.write(' '.join(line)+'\n')

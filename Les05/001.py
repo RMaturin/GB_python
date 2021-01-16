@@ -8,8 +8,8 @@ print(f'Идет запись в файл {file_name}')
 
 with open(file_name, 'w', encoding='UTF-8') as f_obj:
     while True:
-        str = input()
-        if len(str) > 0:
-            f_obj.write(str+'\n')
+        line = input()
+        if len(line) > 0:
+            f_obj.write(line+'\n')
         else:
             break
