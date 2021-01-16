@@ -9,20 +9,20 @@
 Пример словаря:
 {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}"""
 
-
+# Функция ищет числа в строка разделенные любым символом
 def find_numbers(in_str):
     l = list()
-    find_next_flg = False
+    exists_flg = False
     num = ''
     for i in in_str:
         if i.isdigit():
             num += i
-            find_next_flg = True
+            exists_flg = True
         else:
-            if not find_next_flg and len(num)>0:
+            if exists_flg:
                 l.append(int(num))
                 num = ''
-            find_next_flg = False
+            exists_flg = False
     if len(num) > 0:
         l.append(int(num))
     return l
